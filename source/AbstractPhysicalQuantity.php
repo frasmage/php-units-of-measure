@@ -182,6 +182,15 @@ abstract class AbstractPhysicalQuantity implements PhysicalQuantityInterface
         return trim($this->originalValue . ' ' . static::getUnit($this->originalUnit)->getName());
     }
 
+    public function __get($key){
+    	if($key == 'unit'){
+    		return $this->originalUnit;
+    	}
+    	elseif($key == 'value'){
+    		return $this->originalValue;
+    	}
+    }
+
     /**
      * @see \PhpUnitsOfMeasure\PhysicalQuantityInterface::add
      */
