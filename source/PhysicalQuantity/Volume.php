@@ -126,8 +126,49 @@ class Volume extends AbstractPhysicalQuantity
 
         // Cup
         $newUnit = UnitOfMeasure::linearUnitFactory('cup', 2.365882e-4);
-        $newUnit->addAlias('cup');
         $newUnit->addAlias('cups');
         static::addUnit($newUnit);
+
+        // Gallon
+        $newUnit = UnitOfMeasure::linearUnitFactory('gallon', 3.7854118e-3);
+        $newUnit->addAlias('gallons');
+        $newUnit->addAlias('us gal');
+        $newUnit->addAlias('gal');
+        $this->registerUnitOfMeasure($newUnit);
+
+        // Quart
+        $newUnit = UnitOfMeasure::linearUnitFactory('quart', 9.4635295e-4);
+        $newUnit->addAlias('quarts');
+        $newUnit->addAlias('qt');
+        $newUnit->addAlias('qts');
+        $newUnit->addAlias('liq qt');
+        $this->registerUnitOfMeasure($newUnit);
+
+        // Fluid Ounce
+        $newUnit = UnitOfMeasure::linearUnitFactory('fl oz', 2.957353e-5);
+        $newUnit->addAlias('fluid ounces');
+        $newUnit->addAlias('fluid-ounce');
+        $newUnit->addAlias('fluid-ounces');
+        $newUnit->addAlias('fluid ounce');
+        $this->registerUnitOfMeasure($newUnit);
+
+        // Pint
+        $newUnit = UnitOfMeasure::linearUnitFactory('pint', 4.73176475e-4);
+        $newUnit->addAlias('pints');
+        $newUnit->addAlias('pt');
+        $newUnit->addAlias('liq pt');
+        $this->registerUnitOfMeasure($newUnit);
+
+        // Tablespoon
+        $newUnit = UnitOfMeasure::linearUnitFactory('tbsp', 1.4787e-5);
+        $newUnit->addAlias('tablespoon');
+        $newUnit->addAlias('tablespoons');
+        $this->registerUnitOfMeasure($newUnit);
+
+        // Teaspoon
+        $newUnit = UnitOfMeasure::linearUnitFactory('tsp', 4.9289e-6);
+        $newUnit->addAlias('teaspoon');
+        $newUnit->addAlias('teaspoons');
+        $this->registerUnitOfMeasure($newUnit);
     }
 }

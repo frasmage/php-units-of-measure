@@ -30,6 +30,21 @@ abstract class AbstractPhysicalQuantity implements PhysicalQuantityInterface
         static::$unitDefinitions[] = $unit;
     }
 
+    public function hasUnit($unit){
+    	// If this class hasn't been initalized yet, do so now
+        if (!is_array(static::$unitDefinitions)) {
+            static::$unitDefinitions = [];
+            static::initialize();
+        }
+
+        foreach (static::$unitDefinitions as $unitOfMeasure) {
+            if ($unit === $unitOfMeasure->getName() || $unitOfMeasure->isAliasOf($unit)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * Get the unit of measure that matches the given name by either name or alias.
      *
