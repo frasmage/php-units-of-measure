@@ -30,7 +30,7 @@ abstract class AbstractPhysicalQuantity implements PhysicalQuantityInterface
         static::$unitDefinitions[] = $unit;
     }
 
-    public function hasUnit($unit){
+    public static function hasUnit($unit){
     	// If this class hasn't been initalized yet, do so now
         if (!is_array(static::$unitDefinitions)) {
             static::$unitDefinitions = [];
