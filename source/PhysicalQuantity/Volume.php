@@ -125,19 +125,19 @@ class Volume extends AbstractPhysicalQuantity
         static::addUnit($newUnit);
 
         // Cup
-        $newUnit = UnitOfMeasure::linearUnitFactory('cup', 2.365882e-4);
+        $newUnit = UnitOfMeasure::linearUnitFactory('cup', 1e-6 * 250);
         $newUnit->addAlias('cups');
         static::addUnit($newUnit);
 
         // Gallon
-        $newUnit = UnitOfMeasure::linearUnitFactory('gallon', 3.7854118e-3);
+        $newUnit = UnitOfMeasure::linearUnitFactory('gallon', 1e-6 * 4546.09);
         $newUnit->addAlias('gallons');
         $newUnit->addAlias('us gal');
         $newUnit->addAlias('gal');
         static::addUnit($newUnit);
 
         // Quart
-        $newUnit = UnitOfMeasure::linearUnitFactory('quart', 9.4635295e-4);
+        $newUnit = UnitOfMeasure::linearUnitFactory('quart', 1e-6 * 1136.52);
         $newUnit->addAlias('quarts');
         $newUnit->addAlias('qt');
         $newUnit->addAlias('qts');
@@ -145,7 +145,7 @@ class Volume extends AbstractPhysicalQuantity
         static::addUnit($newUnit);
 
         // Fluid Ounce
-        $newUnit = UnitOfMeasure::linearUnitFactory('fl oz', 2.957353e-5);
+        $newUnit = UnitOfMeasure::linearUnitFactory('fl oz', 1e-6 * 28.41);
         $newUnit->addAlias('fluid ounces');
         $newUnit->addAlias('fluid-ounce');
         $newUnit->addAlias('fluid-ounces');
@@ -153,20 +153,20 @@ class Volume extends AbstractPhysicalQuantity
         static::addUnit($newUnit);
 
         // Pint
-        $newUnit = UnitOfMeasure::linearUnitFactory('pint', 4.73176475e-4);
+        $newUnit = UnitOfMeasure::linearUnitFactory('pint', 1e-6 * 578.26);
         $newUnit->addAlias('pints');
         $newUnit->addAlias('pt');
         $newUnit->addAlias('liq pt');
         static::addUnit($newUnit);
 
         // Tablespoon
-        $newUnit = UnitOfMeasure::linearUnitFactory('tbsp', 1.4787e-5);
+        $newUnit = UnitOfMeasure::linearUnitFactory('tbsp', 1e-6 * 15);
         $newUnit->addAlias('tablespoon');
         $newUnit->addAlias('tablespoons');
         static::addUnit($newUnit);
 
         // Teaspoon
-        $newUnit = UnitOfMeasure::linearUnitFactory('tsp', 4.9289e-6);
+        $newUnit = UnitOfMeasure::linearUnitFactory('tsp', 1e-6 * 5);
         $newUnit->addAlias('teaspoon');
         $newUnit->addAlias('teaspoons');
         static::addUnit($newUnit);
